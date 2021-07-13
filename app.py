@@ -1,9 +1,6 @@
 from flask import Flask, request, render_template, url_for
 from pytube import YouTube
 import pafy
-import tkinter as tk
-from tkinter import filedialog, messagebox
-from pathlib import Path
 
 app = Flask(__name__)
 
