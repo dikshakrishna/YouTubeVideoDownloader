@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Downloader</title>
+</head>
+<body>
+<div>
+    <form action="/link" method="post" enctype="multipart/form-data">
+        <label for="url_download">Enter the url:</label>
+        <input type="url" id="url_download" name="url_download">
+        <!--<button type="submit" name="destination" value="Destination Folder">Destination Folder</button>-->
+        <button type="submit" name="audio" value="Download Audio">Download Audio</button>
+        <button type="submit" name="video" value="Download Video">Download Video</button>
+
+    </form>
+    {{  Result  }}<br>
+    {{  Title  }}<br>
+    {{  Length  }}
+</div>
+</body>
+</html>
