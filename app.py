@@ -24,16 +24,11 @@ def link():
             if request.form.get("audio"):
                 result = pafy.new(lk)
                 audio_best_quality = result.getbestaudio()
-                #download_Directory = str(Path.home() / "Downloads")
-                #audio_best_quality.download(download_Directory)
-                #yda=ytube.streams.get_audio_only(subtype="mp3")
-                audio_best_quality.download(output_path="C:\\Users\\RELIANCE DIGITAL\\Desktop\\stuffs\\study materials\\ME!!\\")
+                audio_best_quality.download(output_path="---ENTER THE DESINATION FOLDER HERE---")
                 return render_template('index.html', Title=title, Result="Audio Downloaded")
             if request.form.get("video"):
                 yd = ytube.streams.get_highest_resolution()
-                download_Directory = str(Path.home() / "Downloads")
-                # yd.download(download_Directory)
-                yd.download(output_path="C:\\Users\\RELIANCE DIGITAL\\Desktop\\stuffs\\study materials\\ME!!\\")
+                yd.download(output_path="---ENTER THE DESINATION FOLDER HERE---")
                 return render_template('index.html', Title=title, Result="Video Downloaded")
 
             return render_template('index.html', Title=title, Length=Length)
